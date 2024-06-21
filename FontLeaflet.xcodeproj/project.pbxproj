@@ -13,6 +13,7 @@
 		1F08E5A52C250B1E00D08BA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F08E5A42C250B1E00D08BA6 /* Preview Assets.xcassets */; };
 		1F08E5AD2C250B5400D08BA6 /* FontNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F08E5AC2C250B5400D08BA6 /* FontNavigationView.swift */; };
 		1F08E5AF2C25103400D08BA6 /* FontSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F08E5AE2C25103400D08BA6 /* FontSource.swift */; };
+		1F08E5B12C25137400D08BA6 /* FontDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F08E5B02C25137400D08BA6 /* FontDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1F08E5A62C250B1E00D08BA6 /* FontLeaflet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FontLeaflet.entitlements; sourceTree = "<group>"; };
 		1F08E5AC2C250B5400D08BA6 /* FontNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontNavigationView.swift; sourceTree = "<group>"; };
 		1F08E5AE2C25103400D08BA6 /* FontSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSource.swift; sourceTree = "<group>"; };
+		1F08E5B02C25137400D08BA6 /* FontDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1F08E5A32C250B1E00D08BA6 /* Preview Content */,
 				1F08E5AC2C250B5400D08BA6 /* FontNavigationView.swift */,
 				1F08E5AE2C25103400D08BA6 /* FontSource.swift */,
+				1F08E5B02C25137400D08BA6 /* FontDetail.swift */,
 			);
 			path = FontLeaflet;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F08E5A02C250B1E00D08BA6 /* ContentView.swift in Sources */,
+				1F08E5B12C25137400D08BA6 /* FontDetail.swift in Sources */,
 				1F08E59E2C250B1E00D08BA6 /* FontLeafletApp.swift in Sources */,
 				1F08E5AD2C250B5400D08BA6 /* FontNavigationView.swift in Sources */,
 				1F08E5AF2C25103400D08BA6 /* FontSource.swift in Sources */,

@@ -18,7 +18,11 @@ struct FontNavigationView : View {
         NavigationSplitView {
             List(selection: $selectedFont) {
                 ForEach(fontSource.fontNames, id: \.self) { fontName in
-                    Text(fontName)
+                    NavigationLink {
+                        FontDetail(fontName: fontName)
+                    } label: {
+                        Text(fontName)
+                    }
                 }
             }
         } detail: {
