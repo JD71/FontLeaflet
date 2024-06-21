@@ -33,5 +33,6 @@ struct FontDetail: View {
                     .font(previewFont)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
