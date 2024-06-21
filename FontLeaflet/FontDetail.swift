@@ -15,10 +15,23 @@ struct FontDetail: View {
     var body: some View {
         @Bindable var fontSource = fontSource
         
+        let previewFont = Font.custom(fontName, size: 24)
+        
         VStack {
-            Text(fontName)
-                .font(fontSource.getFont(fontName: fontName))
-            Text("bezier goes here")
+            DisclosureGroup("Preview") {
+                VStack {
+                    Text("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+                        .font(previewFont)
+                    Text("abcdefghijklmnopqrstuvwxyz")
+                        .font(previewFont)
+                    Text("0123456789")
+                        .font(previewFont)
+                }
+            }
+            DisclosureGroup("Repertoire") {
+                Text("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+                    .font(previewFont)
+            }
         }
     }
 }
