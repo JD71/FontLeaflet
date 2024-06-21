@@ -12,11 +12,9 @@ struct FontDetail: View {
     var fontName: String
     
     var body: some View {
-        HSplitView {
+        VStack {
             Text(fontName)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
             Text("bezier goes here")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
 }

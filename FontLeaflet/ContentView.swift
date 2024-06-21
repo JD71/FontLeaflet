@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        FontNavigationView()
+        FontGridView()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
