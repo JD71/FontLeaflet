@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct FontLeafletApp: App {
+    @State private var fontSource = FontSource()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(fontSource)
         }
     }
 }
