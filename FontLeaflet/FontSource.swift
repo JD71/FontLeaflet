@@ -11,11 +11,21 @@ import SwiftUI
 
 @Observable
 class FontSource {
-    let allFontNames = NSFontManager.shared.availableFonts
+    let allFontNames = NSFontManager.shared.availableFontFamilies
     
     var fontNames : [String] {
-        return ["Andale Mono", "Baskerville", "Diwan Kufi"]
+        return previewMode ? ["Andale Mono", "Baskerville", "Diwan Kufi"] : allFontNames
     }
+    
+    init(previewMode: Bool) {
+        self.previewMode = previewMode
+    }
+    
+    init() {
+        self.previewMode = false
+    }
+    
+    let previewMode: Bool
     
     func getFont(fontName: String) -> Font {
         return Font.custom(fontName, size: 10.0)

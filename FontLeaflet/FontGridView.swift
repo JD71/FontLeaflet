@@ -45,5 +45,5 @@ struct FontGridView: View {
 
 #Preview {
     FontGridView()
-        .environment(FontSource())
+        .environment(FontSource(previewMode: true))
 }
