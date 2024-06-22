@@ -12,7 +12,7 @@ struct FontGridView: View {
     @Environment(FontSource.self) var fontSource
 
     let columns = [GridItem(.adaptive(minimum:100))]
-
+    
     var body: some View {
         @Bindable var fontSource = fontSource
 
@@ -20,10 +20,18 @@ struct FontGridView: View {
             ScrollView {
                 LazyVGrid(columns: columns, alignment: .leading) {
                     ForEach(fontSource.fontNames, id: \.self) { fontName in
-                        NavigationLink {
-                            FontDetail(fontName: fontName)
-                        } label: {
+                        VStack {
                             FontGridCell(fontName: fontName)
+
+                            NavigationLink {
+                                FontDetail(fontName: fontName)
+                            } label: {
+                                Text(fontName)
+                                    .font(fontSource.getFont(fontName: fontName))
+                            }
+                            .buttonStyle(.borderless)
+                            .foregroundColor(.white)
+                            .tint(.black)
                         }
                     }
                 }
