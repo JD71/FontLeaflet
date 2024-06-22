@@ -15,7 +15,7 @@ struct FontGridView: View {
     
     var body: some View {
         @Bindable var fontSource = fontSource
-
+        
         NavigationStack {
             ScrollView {
                 LazyVGrid(columns: columns, alignment: .leading) {
@@ -27,7 +27,6 @@ struct FontGridView: View {
                                 FontDetail(fontName: fontName)
                             } label: {
                                 Text(fontName)
-                                    .font(fontSource.getFont(fontName: fontName))
                             }
                             .buttonStyle(.borderless)
                             .foregroundColor(.white)
@@ -41,6 +40,7 @@ struct FontGridView: View {
         }
         .frame(minWidth:200, maxHeight: .infinity)
     }
+    
 }
 
 #Preview {

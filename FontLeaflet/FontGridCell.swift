@@ -20,12 +20,13 @@ struct FontGridCell: View {
         let bigFont = Font.custom(fontName, size: 24)
 
         VStack {
-            Text("Aa")
-                .font(bigFont)
-
-            Text(fontName)
-                .font(smallFont)
-
+            RoundedRectangle(cornerSize: /*@START_MENU_TOKEN@*/CGSize(width: 20, height: 10)/*@END_MENU_TOKEN@*/, style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/)
+                .fill(Color.blue)
+                .foregroundColor(.white)
+                .overlay(alignment: .center) {
+                    Text("Aa")
+                        .font(bigFont)
+                }
         }
         .frame(minWidth: 75, minHeight: 75)
     }
