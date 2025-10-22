@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct FontGridCell: View {
-    @Environment (FontSource.self) var fontSource
+    @Environment(FontSource.self) var fontSource
     var fontName: String
 
 
@@ -30,4 +30,9 @@ struct FontGridCell: View {
         }
         .frame(minWidth: 75, minHeight: 75)
     }
+}
+
+#Preview {
+    FontGridCell(fontName: "Baskerville")
+        .environment(FontSource(previewMode: true))
 }

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct FontDetail: View {
-    @Environment (FontSource.self) var fontSource
+    @Environment(FontSource.self) var fontSource
     var fontName: String
     
     var body: some View {
@@ -35,4 +35,9 @@ struct FontDetail: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
+}
+
+#Preview {
+    FontDetail(fontName: "Baskerville")
+        .environment(FontSource(previewMode: true))
 }

@@ -30,3 +30,8 @@ struct FontNavigationView : View {
         }
     }
 }
+
+#Preview {
+    FontNavigationView()
+        .environment(FontSource(previewMode: true))
+}
